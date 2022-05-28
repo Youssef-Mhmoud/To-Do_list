@@ -1,0 +1,87 @@
+/* Start Global Rules  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #1D3E53;
+  height: 100vh;
+  font-family: sans-serif;
+}
+/* End Global Rules  */
+h1 {
+  margin: 80px auto 10px;
+  width: 300px;
+  background-color: #77ABB7;
+  text-align: center;
+  padding: 10px 25px;
+  border-radius: 5px;
+  color: white;
+}
+.container {
+  margin: 40px auto;
+  width: 400px;
+  text-align: center;
+}
+/* Start Input Search  */
+.search-input {
+  background-color: #77ABB7;
+  padding: 10px;
+  border-radius: 50px;
+}
+input[type="text"] {
+  width: 300px;
+  padding: 10px 7px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  caret-color: #1D3E53;
+  background-color: #e2f0f3;
+}
+button {
+  background-color: #254B62;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 15px;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: .5s;
+}
+button:hover {
+  opacity: .9;
+}
+/* End Input Search  */
+/* Start Task Area  */
+.task {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #77ABB7;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+}
+.task p {
+  font-size: 20px;
+  letter-spacing: 0.9px;
+}
+.task i {
+  cursor: pointer;
+  font-size: 25px;
+  color: #1D3E53;
+  transition: .5s;
+}
+.task i:hover {
+  transform: rotate(90deg);
+}
+/* End Task Area  */
+/* Some Lovely things */
+::placeholder {
+  color: #1D3E53;
+}
+::selection {
+  background-color: #1D3E53;
+}
