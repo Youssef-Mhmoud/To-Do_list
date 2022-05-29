@@ -12,7 +12,7 @@ body {
 /* End Global Rules  */
 h1 {
   margin: 80px auto 10px;
-  width: 300px;
+  width: 350px;
   background-color: #77ABB7;
   text-align: center;
   padding: 10px 25px;
@@ -76,6 +76,11 @@ button:hover {
 }
 .task i:hover {
   transform: rotate(90deg);
+}
+.check {
+  cursor: pointer;
+  transform: translateY(-2px);
+  margin-left: 5px;
 }
 /* End Task Area  */
 /* Some Lovely things */
