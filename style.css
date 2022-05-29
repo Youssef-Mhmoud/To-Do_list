@@ -6,7 +6,7 @@
 }
 body {
   background-color: #1D3E53;
-  height: 100vh;
+  height: 80vh;
   font-family: sans-serif;
 }
 /* End Global Rules  */
@@ -32,6 +32,7 @@ h1 {
 }
 input[type="text"] {
   width: 300px;
+  font-size: 18px;
   padding: 10px 7px;
   border-radius: 50px;
   border: none;
@@ -47,6 +48,7 @@ button {
   padding: 10px 15px;
   margin-left: 5px;
   cursor: pointer;
+  font-size: 18px;
   transition: .5s;
 }
 button:hover {
