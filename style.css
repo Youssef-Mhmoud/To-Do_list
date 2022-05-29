@@ -55,6 +55,7 @@ button:hover {
 /* End Input Search  */
 /* Start Task Area  */
 .task {
+  position: relative;
   margin-top: 30px;
   display: flex;
   justify-content: space-between;
@@ -73,14 +74,15 @@ button:hover {
   font-size: 25px;
   color: #1D3E53;
   transition: .5s;
+  position: relative;
+  right: 10px;
 }
-.task i:hover {
+.task i.fa-xmark:hover {
   transform: rotate(90deg);
 }
 .check {
-  cursor: pointer;
-  transform: translateY(-2px);
-  margin-left: 5px;
+  text-decoration: line-through; 
+  opacity: .5;
 }
 /* End Task Area  */
 /* Some Lovely things */
