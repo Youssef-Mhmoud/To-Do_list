@@ -91,7 +91,6 @@ button:hover {
 .check-box {
   display: inline-flex;
   align-items: center;
-  cursor: pointer;
 }
 .check-list {
   width: 1.60em;
@@ -102,6 +101,7 @@ button:hover {
   align-items: center;
   justify-content: center;
   margin-right: 18px;
+  cursor: pointer;
   transition: all .4s;
 }
 .check-background {

@@ -30,9 +30,15 @@ form.addEventListener("submit", (eo) => {
 // Remove A Task
 taskCont.addEventListener("click", (eo) => {
   if (eo.target.className == "fa-solid fa-xmark") {
-    eo.target.parentElement.parentElement.remove();
+    eo.target.parentElement.parentElement.remove();  
+  } 
+  // Add A Check Box
+  else if(eo.target.className == "check-list") {
+    eo.target.parentElement.getElementsByClassName("text-line")[0].classList.add("check");
+    eo.target.classList.add('check-background')
+  } 
+  else if(eo.target.className == "check-list check-background") {
+    eo.target.classList.remove('check-background')
+    eo.target.parentElement.getElementsByClassName("text-line")[0].classList.remove("check");
   }
-  eo.target.getElementsByClassName("text-line")[0].classList.toggle("check");
-  eo.target.getElementsByClassName('check-list')[0].classList.toggle('check-background')
-  
 });
