@@ -25,20 +25,30 @@ form.addEventListener("submit", (eo) => {
       <i class="fa-solid fa-xmark"></i>
     </div>
   </div>`;
+  // To Reset The Input Field
+  input.value = "";
 });
 
-// Remove A Task
+// Remove A Task And Finished
 taskCont.addEventListener("click", (eo) => {
-  if (eo.target.className == "fa-solid fa-xmark") {
-    eo.target.parentElement.parentElement.remove();  
-  } 
-  // Add A Check Box
-  else if(eo.target.className == "check-list") {
-    eo.target.parentElement.getElementsByClassName("text-line")[0].classList.add("check");
-    eo.target.classList.add('check-background')
-  } 
-  else if(eo.target.className == "check-list check-background") {
-    eo.target.classList.remove('check-background')
-    eo.target.parentElement.getElementsByClassName("text-line")[0].classList.remove("check");
+  switch (eo.target.className) {
+    // Remove A Task
+    case "fa-solid fa-xmark":
+      eo.target.parentElement.parentElement.remove();
+      break;
+    // Add Background Check Box And Add Class Name Text Line
+    case "check-list":
+      eo.target.parentElement
+        .getElementsByClassName("text-line")[0]
+        .classList.add("check");
+      eo.target.classList.add("check-background");
+      break;
+    // Remove Background Check Box And Remove Class Name Text Line
+    case "check-list check-background":
+      eo.target.classList.remove("check-background");
+      eo.target.parentElement
+        .getElementsByClassName("text-line")[0]
+        .classList.remove("check");
+      break;
   }
 });
