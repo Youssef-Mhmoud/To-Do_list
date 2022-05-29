@@ -89,4 +89,5 @@ button:hover {
 }
 ::selection {
   background-color: #1D3E53;
+  color: white;
 }
