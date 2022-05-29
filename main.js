@@ -17,7 +17,10 @@ form.addEventListener("submit", (eo) => {
 
   taskCont.innerHTML += `
   <div class="task">
-    <p class="text-line">${input.value}</p>
+    <div class="check-box">
+      <div class="check-list"></div>
+      <p class="text-line">${input.value}</p>
+    </div>
     <div>
       <i class="fa-solid fa-xmark"></i>
     </div>
@@ -30,4 +33,6 @@ taskCont.addEventListener("click", (eo) => {
     eo.target.parentElement.parentElement.remove();
   }
   eo.target.getElementsByClassName("text-line")[0].classList.toggle("check");
+  eo.target.getElementsByClassName('check-list')[0].classList.toggle('check-background')
+  
 });

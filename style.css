@@ -87,7 +87,46 @@ button:hover {
   opacity: .5;
 }
 /* End Task Area  */
-
+/* Start Custom Check Box  */
+.check-box {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+.check-list {
+  width: 1.60em;
+  height: 1.60em;
+  border: 2px solid #ccc;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 18px;
+  transition: all .4s;
+}
+.check-background {
+  border: 2px solid #1D3E53;
+  background-color: #1D3E53;
+  animation: check 1s 1;
+}
+.check-background::after {
+  content: '\2713';
+  color: white;
+  font-size: 18px;
+} 
+/* Animation Check Box  */
+@keyframes check {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* End Custom Check Box  */
 /* Some Lovely things */
 ::placeholder {
   color: #1D3E53;
