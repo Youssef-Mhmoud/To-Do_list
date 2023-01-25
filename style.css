@@ -10,6 +10,29 @@ body {
   font-family: sans-serif;
 }
 /* End Global Rules  */
+.task-emp {
+  position: absolute;
+  left: 50%;
+  top: 22%;
+  transform: translate(-50%, 100%);
+  color: white;
+  background-color: rgb(202, 64, 64);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 1.1px;
+  transition: all .4s;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+.task-emp.show-empty {
+  transform: translate(-50%, 0);
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
 h1 {
   margin: 80px auto 10px;
   width: 350px;
@@ -33,7 +56,7 @@ h1 {
 input[type="text"] {
   width: 300px;
   font-size: 18px;
-  padding: 10px 7px;
+  padding: 12px;
   border-radius: 50px;
   border: none;
   outline: none;
@@ -49,6 +72,7 @@ button {
   margin-left: 5px;
   cursor: pointer;
   font-size: 18px;
+  font-weight: 500;
   transition: .5s;
 }
 button:hover {

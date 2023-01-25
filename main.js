@@ -15,6 +15,8 @@ form.addEventListener("submit", (eo) => {
   // Stop Reload The Page
   eo.preventDefault();
 
+  if (!input.value) return document.querySelector('.task-emp').classList.add('show-empty');
+  else document.querySelector('.task-emp').classList.remove('show-empty')
   taskCont.innerHTML += `
   <div class="task">
     <div class="check-box">
