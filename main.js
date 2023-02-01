@@ -15,18 +15,24 @@ form.addEventListener("submit", (eo) => {
   // Stop Reload The Page
   eo.preventDefault();
 
-  if (!input.value) return document.querySelector('.task-emp').classList.add('show-empty');
-  else document.querySelector('.task-emp').classList.remove('show-empty')
+  if (!input.value)
+    return document.querySelector(".task-emp").classList.add("show-empty");
+  else document.querySelector(".task-emp").classList.remove("show-empty");
   taskCont.innerHTML += `
   <div class="task">
-    <div class="check-box">
-      <div class="check-list"></div>
-      <p class="text-line">${input.value}</p>
-    </div>
-    <div>
-      <i class="fa-solid fa-xmark"></i>
-    </div>
-  </div>`;
+  <div class="check-box">
+  <div class="check-list"></div>
+  <p class="text-line">${input.value}</p>
+  </div>
+  <div>
+  <i class="fa-solid fa-xmark"></i>
+  </div>
+  </div>
+  
+  <p class="year-task">${theDate.getDate()} - ${
+    theDate.getMonth() + 1
+  } - ${theDate.getFullYear()}</p>
+  `;
   // To Reset The Input Field
   input.value = "";
 });
@@ -37,13 +43,16 @@ taskCont.addEventListener("click", (eo) => {
     // Remove A Task
     case "fa-solid fa-xmark":
       eo.target.parentElement.parentElement.remove();
+      document.querySelector('.year-task').remove()
       break;
     // Add Background Check Box And Add Class Name Text Line
     case "check-list":
       eo.target.parentElement
         .getElementsByClassName("text-line")[0]
         .classList.add("check");
+
       eo.target.classList.add("check-background");
+
       break;
     // Remove Background Check Box And Remove Class Name Text Line
     case "check-list check-background":

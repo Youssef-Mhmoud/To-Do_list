@@ -5,30 +5,32 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #1D3E53;
+  /* background-color: #1d3e53; */
+  background-image: linear-gradient(to right, #133b53, #1d577e);
   height: 80vh;
   font-family: sans-serif;
 }
 /* End Global Rules  */
 .task-emp {
   position: absolute;
-  left: 50%;
-  top: 22%;
-  transform: translate(-50%, 100%);
+  left: 0%;
+  top: 20%;
+  transform: translateX(-100%);
   color: white;
   background-color: rgb(202, 64, 64);
   border-radius: 8px;
-  padding: 8px 12px;
+  padding: 8px 32px;
   font-size: 22px;
   font-weight: 600;
   letter-spacing: 1.1px;
-  transition: all .4s;
+  transition: all 0.4s;
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
 }
+
 .task-emp.show-empty {
-  transform: translate(-50%, 0);
+  transform: translateX(30%);
   opacity: 1;
   pointer-events: auto;
   visibility: visible;
@@ -36,7 +38,7 @@ body {
 h1 {
   margin: 80px auto 10px;
   width: 350px;
-  background-color: #77ABB7;
+  background-color: #77abb7;
   text-align: center;
   padding: 10px 25px;
   border-radius: 5px;
@@ -49,7 +51,7 @@ h1 {
 }
 /* Start Input Search  */
 .search-input {
-  background-color: #77ABB7;
+  background-color: #77abb7;
   padding: 10px;
   border-radius: 50px;
 }
@@ -60,11 +62,11 @@ input[type="text"] {
   border-radius: 50px;
   border: none;
   outline: none;
-  caret-color: #1D3E53;
+  caret-color: #1d3e53;
   background-color: #e2f0f3;
 }
 button {
-  background-color: #254B62;
+  background-color: #254b62;
   color: white;
   border: none;
   border-radius: 50px;
@@ -73,10 +75,10 @@ button {
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
-  transition: .5s;
+  transition: 0.5s;
 }
 button:hover {
-  opacity: .9;
+  opacity: 0.9;
 }
 /* End Input Search  */
 /* Start Task Area  */
@@ -86,7 +88,7 @@ button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #77ABB7;
+  background-color: #77abb7;
   padding: 10px 20px;
   border-radius: 5px;
   color: rgb(255, 255, 255);
@@ -98,8 +100,8 @@ button:hover {
 .task i {
   cursor: pointer;
   font-size: 25px;
-  color: #1D3E53;
-  transition: .5s;
+  color: #1d3e53;
+  transition: 0.5s;
   position: relative;
   right: 10px;
 }
@@ -107,8 +109,8 @@ button:hover {
   transform: rotate(90deg);
 }
 .check {
-  text-decoration: line-through; 
-  opacity: .5;
+  text-decoration: line-through;
+  opacity: 0.5;
 }
 /* End Task Area  */
 /* Start Custom Check Box  */
@@ -117,8 +119,8 @@ button:hover {
   align-items: center;
 }
 .check-list {
-  width: 1.60em;
-  height: 1.60em;
+  width: 1.6em;
+  height: 1.6em;
   border: 2px solid #ccc;
   border-radius: 3px;
   display: flex;
@@ -126,18 +128,18 @@ button:hover {
   justify-content: center;
   margin-right: 18px;
   cursor: pointer;
-  transition: all .4s;
+  transition: all 0.4s;
 }
 .check-background {
-  border: 2px solid #1D3E53;
-  background-color: #1D3E53;
+  border: 2px solid #1d3e53;
+  background-color: #1d3e53;
   animation: check 1s 1;
 }
 .check-background::after {
-  content: '\2713';
+  content: "\2713";
   color: white;
   font-size: 18px;
-} 
+}
 /* Animation Check Box  */
 @keyframes check {
   0% {
@@ -153,9 +155,20 @@ button:hover {
 /* End Custom Check Box  */
 /* Some Lovely things */
 ::placeholder {
-  color: #1D3E53;
+  color: #1d3e53;
 }
 ::selection {
-  background-color: #1D3E53;
+  background-color: #1d3e53;
   color: white;
+}
+
+.year-task {
+  background-color: #77abb7;
+  padding: 10px;
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 0 0 5px 5px;
+  font-size: 20px;
+  color: white;
+  border-top: 2px solid #ffffff;
 }
